@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-    <noscript>
-        Warning - JavaScript is Disabled.
-        For full functionality of this page, it is necessary to enable JavaScript.
-    </noscript>
-</head>
-<body onload="start();">
-    
-    <div id = "title">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JavaScript and DOM API</title>
+    <link rel="stylesheet" type="text/css" href="game.css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="main.js"></script>
 
-    </div>
+    <body onload="start();">
 
-    <div id="scores">
+        <div id="title">
+            <h1>Help the bear escape the bees !</h1>
+            <p>Bear tries to avoid being stung by <input type="text" id="nbBees" value="1" size="3"> bees by running and jumping. The objective is to have as less stings as possible!</p>
+            <button onclick="addBee();">Add bee</button>
+            <p>You can ajust bees' speed <input type="text" id="speedBees" value="50" size="3"> px/ms
+                <br> and the refresh period <input type="text" id="periodTimer" value="50" size="3"> ms </p>
+            <h2>Press left, right, up, down keys to move the bear</h2>
 
-    </div>
-    <div id="board">
-        <img src="./images/bear.png" id="bear" alt="bear">
-    </div>
-</body>
+        </div>
+        <div id="scores">
+            <table>
+                <tr>
+                    <td>
+                        <p>Stings: [<span id="hits">0</span>]</p>
+                    </td>
+                    <td>
+                        <p>Best duration: [<span id="duration">?</span>]</p>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="board">
+            <img src="./images/bear.png" id="bear" alt="bear">
+        </div>
+    </body>
+
 </html>
